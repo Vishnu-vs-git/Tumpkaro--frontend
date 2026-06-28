@@ -1,12 +1,13 @@
-import NavBar from "./components/layout/NavBar"
+import LandingLayout from "./shared/components/layouts/Landinglayout"
+import LandingPage from "./features/landing/LandingPage"
 
 
 function App() {
   
   return (
-    <>
-      <NavBar/>
-    </>
+   <LandingLayout>
+     <LandingPage/>
+   </LandingLayout>
   )
 }
 
