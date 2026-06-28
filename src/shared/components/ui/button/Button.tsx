@@ -1,9 +1,10 @@
 import { forwardRef } from "react";
 import { Loader2 } from "lucide-react";
 
-import { cn } from "@/shared/lib/utils";
+
 import type { ButtonProps } from "./Button.types";
 import { buttonVariants } from "./ButtonVariants";
+import { cn } from "../../../lib/utils";
 
 
 
