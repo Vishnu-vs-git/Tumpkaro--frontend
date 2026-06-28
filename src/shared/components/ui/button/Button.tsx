@@ -3,8 +3,9 @@ import { Loader2 } from "lucide-react";
 
 
 import type { ButtonProps } from "./Button.types";
-import { buttonVariants } from "./ButtonVariants";
+
 import { cn } from "../../../lib/utils";
+import { buttonVariants } from "./ButtonVariants";
 
 
 
