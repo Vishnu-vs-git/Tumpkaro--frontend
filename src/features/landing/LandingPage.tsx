@@ -1,4 +1,6 @@
+import Features from "./components/features/Features"
 import Hero from "./components/hero/Hero"
+import TrustedBy from "./components/TrustedBy/TrustedBy"
 
 
 const LandingPage = () => {
@@ -6,6 +8,8 @@ const LandingPage = () => {
     <>
      {/* <Hero/> */}
      <Hero/>
+     <TrustedBy/>
+     <Features/>
     </>
   )
 }
