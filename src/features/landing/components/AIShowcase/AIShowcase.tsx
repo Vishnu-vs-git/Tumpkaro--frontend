@@ -7,6 +7,7 @@ import { Container } from "../../../../shared/components/ui/container";
 import { SectionHeading } from "../../../../shared/components/ui/SectionHeading";
 import { Button } from "../../../../shared/components/ui/Button/Button";
 
+
 const AIShowcase = () => {
   return (
     <section className="py-28">
