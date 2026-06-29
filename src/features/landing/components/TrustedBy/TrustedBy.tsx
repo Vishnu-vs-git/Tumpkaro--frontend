@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 
 import TrustedStat from "./TrustedStat";
 import { platforms, stats } from "./trusted.data";
-import { Container } from "../../../../shared/components/ui/Container";
+
 import { SectionHeading } from "../../../../shared/components/ui/SectionHeading";
+import { Container } from "../../../../shared/components/ui/container";
 
 const TrustedBy = () => {
   return (

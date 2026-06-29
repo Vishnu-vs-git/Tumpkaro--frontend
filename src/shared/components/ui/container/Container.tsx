@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
-import type { ContainerProps } from ".";
+
 import { cn } from "../../../lib/utils";
+import type { ContainerProps } from "./container.types";
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
   ({ children, className, ...props }, ref) => {
