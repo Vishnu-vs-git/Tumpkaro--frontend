@@ -3,6 +3,7 @@ import Features from "./components/features/Features"
 import Hero from "./components/hero/Hero"
 import HowItWorks from "./components/HowItWorks/HowItWorks"
 import Pricing from "./components/Pricing/Pricing"
+import Testimonials from "./components/Testimonials/Testimonials"
 import TrustedBy from "./components/TrustedBy/TrustedBy"
 
 
@@ -16,6 +17,7 @@ const LandingPage = () => {
      <HowItWorks/>
      <AIShowcase/>
      <Pricing/>
+     <Testimonials/>
     </>
   )
 }
