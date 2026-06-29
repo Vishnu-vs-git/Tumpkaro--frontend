@@ -1,4 +1,5 @@
 import AIShowcase from "./components/AIShowcase/AIShowcase"
+import FAQ from "./components/FAQ/FAQ"
 import Features from "./components/features/Features"
 import Hero from "./components/hero/Hero"
 import HowItWorks from "./components/HowItWorks/HowItWorks"
@@ -18,6 +19,7 @@ const LandingPage = () => {
      <AIShowcase/>
      <Pricing/>
      <Testimonials/>
+     <FAQ/>
     </>
   )
 }
