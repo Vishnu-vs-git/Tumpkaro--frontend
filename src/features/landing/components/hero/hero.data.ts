@@ -50,3 +50,62 @@ export const heroThumbnails = [
     translate: "translate-y-24",
   },
 ];
+
+export const particles = [
+  {
+    id: 1,
+    left: "10%",
+    top: "20%",
+    size: 8,
+    duration: 10,
+  },
+  {
+    id: 2,
+    left: "25%",
+    top: "70%",
+    size: 6,
+    duration: 12,
+  },
+  {
+    id: 3,
+    left: "42%",
+    top: "15%",
+    size: 10,
+    duration: 14,
+  },
+  {
+    id: 4,
+    left: "60%",
+    top: "45%",
+    size: 7,
+    duration: 11,
+  },
+  {
+    id: 5,
+    left: "82%",
+    top: "18%",
+    size: 9,
+    duration: 13,
+  },
+  {
+    id: 6,
+    left: "92%",
+    top: "78%",
+    size: 6,
+    duration: 15,
+  },
+  {
+    id: 7,
+    left: "15%",
+    top: "88%",
+    size: 8,
+    duration: 12,
+  },
+  {
+    id: 8,
+    left: "75%",
+    top: "65%",
+    size: 10,
+    duration: 16,
+  },
+];
