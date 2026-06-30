@@ -9,6 +9,7 @@ const SidebarItem = ({
   label,
   href,
   icon: Icon,
+  collapsed
 }: SidebarItemProps) => {
   return (
     <NavLink
@@ -24,9 +25,11 @@ const SidebarItem = ({
     >
       <Icon size={20} />
 
-      <span className="font-medium">
-        {label}
-      </span>
+     {!collapsed && (
+  <span className="font-medium">
+    {label}
+  </span>
+)}
     </NavLink>
   );
 };

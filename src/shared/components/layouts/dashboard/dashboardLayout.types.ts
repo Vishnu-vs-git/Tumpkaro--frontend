@@ -4,5 +4,8 @@ export interface SidebarItemProps {
   label: string;
   href: string;
   icon: LucideIcon;
-  active?: boolean;
+  collapsed?: boolean;
+}
+export interface SidebarProps {
+  collapsed: boolean;
 }
