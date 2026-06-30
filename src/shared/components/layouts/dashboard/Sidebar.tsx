@@ -5,11 +5,14 @@ import { motion } from "framer-motion";
 
 import SidebarItem from "./SidebarItem";
 import { dashboardNavigation } from "./dashboardNavigation";
-import type { SidebarProps } from "./dashboardLayout.types";
 import Logo from "../../common/Logo";
 import { Button } from "../../ui/Button/Button";
+import { useAppSelector } from "../../../hooks/useRedux";
 
-const Sidebar = ({ collapsed }: SidebarProps) => {
+const Sidebar = () => {
+  const collapsed = useAppSelector(
+    (state) => state.ui.sidebarCollapsed
+  );
   return (
     <motion.aside
       animate={{
@@ -37,7 +40,7 @@ const Sidebar = ({ collapsed }: SidebarProps) => {
           <SidebarItem
             key={item.label}
             {...item}
-            collapsed={collapsed}
+            
           />
         ))}
       </nav>

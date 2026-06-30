@@ -1,16 +1,19 @@
 import { NavLink } from "react-router-dom";
+
 import type { SidebarItemProps } from "./dashboardLayout.types";
 import { cn } from "../../../lib/utils";
-
-
+import { useAppSelector } from "../../../hooks/useRedux";
 
 
 const SidebarItem = ({
   label,
   href,
   icon: Icon,
-  collapsed
 }: SidebarItemProps) => {
+  const collapsed = useAppSelector(
+    (state) => state.ui.sidebarCollapsed
+  );
+
   return (
     <NavLink
       to={href}
@@ -25,11 +28,11 @@ const SidebarItem = ({
     >
       <Icon size={20} />
 
-     {!collapsed && (
-  <span className="font-medium">
-    {label}
-  </span>
-)}
+      {!collapsed && (
+        <span className="font-medium">
+          {label}
+        </span>
+      )}
     </NavLink>
   );
 };
