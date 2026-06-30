@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 import Navbar from "./NavBar"
-import Footer from "./Footer"
+import Footer from "../../../features/landing/components/Footer/Footer"
+
 
 interface LandingLayoutProps{
   children:ReactNode
@@ -13,7 +14,7 @@ const LandingLayout = ({children}:LandingLayoutProps) => {
     <div className="min-h-screen bg-slate-950 text white">
       <Navbar/>
       <main>{children}</main>
-      <Footer/>
+     <Footer/>
     </div>
   )
 }
