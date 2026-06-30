@@ -2,6 +2,7 @@ import AIShowcase from "./components/AIShowcase/AIShowcase"
 import CTA from "./components/CTA/CTA"
 import FAQ from "./components/FAQ/FAQ"
 import Features from "./components/features/Features"
+
 import Hero from "./components/hero/Hero"
 import HowItWorks from "./components/HowItWorks/HowItWorks"
 import Pricing from "./components/Pricing/Pricing"
@@ -22,6 +23,7 @@ const LandingPage = () => {
      <Testimonials/>
      <FAQ/>
      <CTA/>
+  
     </>
   )
 }
