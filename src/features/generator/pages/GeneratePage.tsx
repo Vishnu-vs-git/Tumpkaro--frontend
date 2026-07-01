@@ -4,6 +4,7 @@ import AIModelSelector from "../components/AIModelSelector/AIModelSelector";
 import AspectRatioSelector from "../components/AspectRatioSelector/AspectRatioSelector";
 import PromptInput from "../components/PromptInput/PromptInput";
 import StyleSelector from "../components/StyleSelector/StyleSelector";
+import UploadArea from "../components/UploadArea/UploadArea";
 import { useGenerateThumbnailForm } from "../hooks/useGenerateThumbnailForm";
 import type { GenerateThumbnailFormValues } from "../schemas/generateThumbnail.schema";
 
@@ -35,6 +36,7 @@ const GeneratePage = () => {
     />
     <AIModelSelector
       control={control}/>
+      <UploadArea control={control} />
     </form>
   );
 };
