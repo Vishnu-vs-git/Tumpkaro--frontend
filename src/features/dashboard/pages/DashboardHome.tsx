@@ -1,3 +1,4 @@
+import Analytics from "../components/Analytics/Analytics";
 import QuickActions from "../components/QuickActions";
 import StatsGrid from "../components/StatsGrid";
 import WelcomeCard from "../components/WelcomeCard";
@@ -8,6 +9,7 @@ const DashboardHome = () => {
       <WelcomeCard name="Vishnu" />
       <StatsGrid/>
       <QuickActions/>
+      <Analytics />
     </div>
   );
 };
