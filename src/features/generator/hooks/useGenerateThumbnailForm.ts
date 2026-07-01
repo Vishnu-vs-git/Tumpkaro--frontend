@@ -9,7 +9,7 @@ export const useGenerateThumbnailForm = () => {
     defaultValues :{
       prompt : "",
       style :"gaming",
-      aspectRatio:"gemini",
+      aspectRatio:"16:9",
       aiModel:"gemini",
       image:null
     },

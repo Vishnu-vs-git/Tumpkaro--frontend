@@ -1,5 +1,7 @@
 
 
+import AIModelSelector from "../components/AIModelSelector/AIModelSelector";
+import AspectRatioSelector from "../components/AspectRatioSelector/AspectRatioSelector";
 import PromptInput from "../components/PromptInput/PromptInput";
 import StyleSelector from "../components/StyleSelector/StyleSelector";
 import { useGenerateThumbnailForm } from "../hooks/useGenerateThumbnailForm";
@@ -25,7 +27,14 @@ const GeneratePage = () => {
         control={control}
         errors={errors}
       />
-      <StyleSelector/>
+      <StyleSelector
+       control={control}
+      />
+      <AspectRatioSelector
+        control={control}
+    />
+    <AIModelSelector
+      control={control}/>
     </form>
   );
 };

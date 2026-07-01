@@ -1,38 +1,38 @@
 import { Controller, type Control } from "react-hook-form";
 
-import StyleCard from "./StyleCard";
-import { styles } from "./styles.data";
+import AIModelCard from "./AIModelCard";
+import { aiModels } from "./aiModels.data";
 import type { GenerateThumbnailFormValues } from "../../schemas/generateThumbnail.schema";
 
-interface StyleSelectorProps {
+interface AIModelSelectorProps {
   control: Control<GenerateThumbnailFormValues>;
 }
 
-const StyleSelector = ({
+const AIModelSelector = ({
   control,
-}: StyleSelectorProps) => {
+}: AIModelSelectorProps) => {
   return (
     <Controller
       control={control}
-      name="style"
+      name="aiModel"
       render={({ field }) => (
         <section>
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-white">
-              Choose a Style
+              AI Model
             </h2>
 
             <p className="mt-2 text-slate-400">
-              Select the style that best matches your content.
+              Choose the AI model to generate your thumbnail.
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {styles.map((style) => (
-              <StyleCard
-                key={style.id}
-                style={style}
-                selected={field.value === style.name}
+          <div className="grid gap-5 lg:grid-cols-3">
+            {aiModels.map((model) => (
+              <AIModelCard
+                key={model.id}
+                model={model}
+                selected={field.value === model.name}
                 onSelect={field.onChange}
               />
             ))}
@@ -43,4 +43,4 @@ const StyleSelector = ({
   );
 };
 
-export default StyleSelector;
+export default AIModelSelector;

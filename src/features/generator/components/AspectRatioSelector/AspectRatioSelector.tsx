@@ -1,38 +1,38 @@
 import { Controller, type Control } from "react-hook-form";
 
-import StyleCard from "./StyleCard";
-import { styles } from "./styles.data";
+import AspectRatioCard from "./AspectRatioCard";
+import { aspectRatios } from "./aspectRations.data";
 import type { GenerateThumbnailFormValues } from "../../schemas/generateThumbnail.schema";
 
-interface StyleSelectorProps {
+interface AspectRatioSelectorProps {
   control: Control<GenerateThumbnailFormValues>;
 }
 
-const StyleSelector = ({
+const AspectRatioSelector = ({
   control,
-}: StyleSelectorProps) => {
+}: AspectRatioSelectorProps) => {
   return (
     <Controller
       control={control}
-      name="style"
+      name="aspectRatio"
       render={({ field }) => (
         <section>
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-white">
-              Choose a Style
+              Aspect Ratio
             </h2>
 
             <p className="mt-2 text-slate-400">
-              Select the style that best matches your content.
+              Choose the output format.
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {styles.map((style) => (
-              <StyleCard
-                key={style.id}
-                style={style}
-                selected={field.value === style.name}
+          <div className="grid gap-5 sm:grid-cols-3">
+            {aspectRatios.map((ratio) => (
+              <AspectRatioCard
+                key={ratio.id}
+                ratio={ratio}
+                selected={field.value === ratio.value}
                 onSelect={field.onChange}
               />
             ))}
@@ -43,4 +43,4 @@ const StyleSelector = ({
   );
 };
 
-export default StyleSelector;
+export default AspectRatioSelector;
