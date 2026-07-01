@@ -1,5 +1,6 @@
 import Analytics from "../components/Analytics/Analytics";
 import QuickActions from "../components/QuickActions";
+import RecentProjects from "../components/RecentProjects";
 import StatsGrid from "../components/StatsGrid";
 import WelcomeCard from "../components/WelcomeCard";
 
@@ -10,6 +11,7 @@ const DashboardHome = () => {
       <StatsGrid/>
       <QuickActions/>
       <Analytics />
+      <RecentProjects />
     </div>
   );
 };
