@@ -1,5 +1,6 @@
 import { X, Download, Pencil } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { downloadImage } from "../../../../shared/utils/downloadImage";
 
 interface ImagePreviewModalProps {
   open: boolean;
@@ -43,9 +44,15 @@ const ImagePreviewModal = ({
             />
 
             <div className="mt-6 flex justify-center gap-4">
-              <button className="rounded-xl bg-violet-600 px-5 py-3 text-white">
-                <Download size={18} />
-              </button>
+             <button
+  type="button"
+  onClick={() =>
+    downloadImage(image, title)
+  }
+  className="rounded-xl bg-violet-600 px-5 py-3 text-white"
+>
+  <Download size={18} />
+</button>
 
               <button className="rounded-xl bg-cyan-600 px-5 py-3 text-white">
                 <Pencil size={18} />

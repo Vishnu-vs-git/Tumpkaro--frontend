@@ -7,6 +7,7 @@ import {
 import { motion } from "framer-motion";
 import type { GeneratedResult } from "./results.types";
 import { Card } from "../../../../shared/components/ui/Card";
+import { downloadImage } from "../../../../shared/utils/downloadImage";
 
 
 
@@ -43,9 +44,18 @@ const ResultCard = ({
               <Eye size={18} />
             </button>
 
-            <button>
-              <Download size={18} />
-            </button>
+           <button
+  type="button"
+  onClick={() =>
+    downloadImage(
+      result.image,
+      result.title
+    )
+  }
+  className="rounded-lg p-2 transition hover:bg-white/5"
+>
+  <Download size={18} />
+</button>
 
             <button>
               <Pencil size={18} />
