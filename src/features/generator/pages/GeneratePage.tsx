@@ -2,7 +2,9 @@
 
 import AIModelSelector from "../components/AIModelSelector/AIModelSelector";
 import AspectRatioSelector from "../components/AspectRatioSelector/AspectRatioSelector";
+import GeneratorWorkspace from "../components/GenerateWorkspace/GenerateWorkspace";
 import PromptInput from "../components/PromptInput/PromptInput";
+import ResultGallery from "../components/ResultGallery/ResultGallery";
 import StyleSelector from "../components/StyleSelector/StyleSelector";
 import UploadArea from "../components/UploadArea/UploadArea";
 import { useGenerateThumbnailForm } from "../hooks/useGenerateThumbnailForm";
@@ -24,7 +26,10 @@ const GeneratePage = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-8"
     >
-      <PromptInput
+       <GeneratorWorkspace 
+        left ={
+          <>
+             <PromptInput
         control={control}
         errors={errors}
       />
@@ -37,6 +42,13 @@ const GeneratePage = () => {
     <AIModelSelector
       control={control}/>
       <UploadArea control={control} />
+          
+          </>
+        }
+        right ={<ResultGallery/>
+        }
+        />
+   
     </form>
   );
 };
