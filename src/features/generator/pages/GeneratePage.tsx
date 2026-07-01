@@ -1,18 +1,32 @@
-import { useState } from "react";
+
+
 import PromptInput from "../components/PromptInput/PromptInput";
-
-
+import StyleSelector from "../components/StyleSelector/StyleSelector";
+import { useGenerateThumbnailForm } from "../hooks/useGenerateThumbnailForm";
+import type { GenerateThumbnailFormValues } from "../schemas/generateThumbnail.schema";
 
 const GeneratePage = () => {
-  const [prompt, setPrompt] = useState("");
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useGenerateThumbnailForm();
+
+  const onSubmit = (data: GenerateThumbnailFormValues) => {
+  console.log(data);
+};
 
   return (
-    <div className="space-y-8">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="space-y-8"
+    >
       <PromptInput
-        value={prompt}
-        onChange={setPrompt}
+        control={control}
+        errors={errors}
       />
-    </div>
+      <StyleSelector/>
+    </form>
   );
 };
 
