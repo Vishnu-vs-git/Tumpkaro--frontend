@@ -11,6 +11,8 @@ import UploadArea from "../components/UploadArea/UploadArea";
 import { useGenerateThumbnailForm } from "../hooks/useGenerateThumbnailForm";
 import type { GenerateThumbnailFormValues } from "../schemas/generateThumbnail.schema";
 import GenerateButton from "../components/GenerateButton/GenerateButon";
+import { mockResults } from "../components/ResultGallery/results.data";
+import type{ GeneratedResult } from "../components/ResultGallery/results.types";
 
 const GeneratePage = () => {
   const {
@@ -19,9 +21,21 @@ const GeneratePage = () => {
     formState: { errors },
   } = useGenerateThumbnailForm();
   const [loading, setLoading] = useState(false);
-  const onSubmit = (data: GenerateThumbnailFormValues) => {
-    setLoading(true)
-  console.log(data);
+  const [results, setResults] = useState<GeneratedResult[]>([]);
+ const onSubmit = async (data: GenerateThumbnailFormValues) => {
+  try {
+    setLoading(true);
+
+    await new Promise((resolve) =>
+      setTimeout(resolve, 2500)
+    );
+
+    setResults(mockResults);
+
+    console.log(data);
+  } finally {
+    setLoading(false);
+  }
 };
 
   return (
@@ -51,6 +65,7 @@ const GeneratePage = () => {
         }
         right ={<ResultGallery
          loading={loading}
+         results={results}
         />
         }
         />
