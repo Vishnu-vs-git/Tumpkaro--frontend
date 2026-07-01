@@ -4,6 +4,7 @@ import LoadingOverlay from "./LoadingOverlay";
 import ResultGrid from "./ResultGrid";
 import type { GeneratedResult } from "./results.types";
 import ImagePreviewModal from "./ImagePreviewModal";
+import HistoryPanel from "./HistoryPanel/HistoryPanel";
 
 
 
@@ -28,6 +29,7 @@ const ResultGallery = ({
 
   return (
      <>
+      <HistoryPanel />
     <ResultGrid
       results={results}
       onPreview={setSelectedImage}
