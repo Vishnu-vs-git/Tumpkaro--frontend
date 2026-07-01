@@ -49,7 +49,9 @@ const GeneratePage = () => {
           
           </>
         }
-        right ={<ResultGallery/>
+        right ={<ResultGallery
+         loading={loading}
+        />
         }
         />
    
